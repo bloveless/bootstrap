@@ -514,6 +514,21 @@ select:focus:invalid {
   }
 }
 
+.input-prepend,
+.input-append {
+  // If we want to have an three inputs in a row or more then we do this to round the first or last input
+  > input:first-child {
+	  -webkit-border-radius:@inputBorderRadius 0 0 @inputBorderRadius;
+	  -moz-border-radius:@inputBorderRadius 0 0 @inputBorderRadius;
+	  border-radius:@inputBorderRadius 0 0 @inputBorderRadius;
+  }
+  
+  > input:last-child {
+	  -webkit-border-radius:0 @inputBorderRadius @inputBorderRadius 0;
+	  -moz-border-radius:0 @inputBorderRadius @inputBorderRadius 0;
+	  border-radius:0 @inputBorderRadius @inputBorderRadius 0;
+  }
+}
 
 
 // Horizontal forms
